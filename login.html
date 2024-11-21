@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register & Login</title>
+  <link rel="stylesheet" href="preloaderStyle.css">
+  <link rel="stylesheet" href="src/css/login.css" />
+  <link rel="shortcut icon" href="ambulance.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+      <div class="box-wrap">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+        <div class="box five"></div>
+        <div class="box six"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="#" class="sign-in-form" onsubmit="return validateSignInForm()">
+          <h2 class="title">Sign in</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Username" aria-label="Username" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock" id="toggle-password"></i>
+            <input type="password" placeholder="Password" id="password-input" aria-label="Password" required />
+          </div>
+          <div class="form-check d-flex">
+            <input type="checkbox" class="form-check-input" id="remember-me" />
+            <label class="form-check-label" for="remember-me">Remember me</label>
+          </div>
+          <input type="submit" value="Login" class="btn solid" />
+          <p class="social-text">Or Sign in with social platforms</p>
+          <div class="social-media">
+            <div class="social-icon g-signin2" id="google_btn">
+              <i class="fab fa-google" style="font-size: 24px; color: #4285F4;"></i>
+            </div>
+            <a href="https://facebook.com/YourPage" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f" style="font-size: 24px; color: #4267b2"></i>
+            </a>
+            <a href="https://github.com/YourGitHubProfile" target="_blank" class="social-icon">
+              <i class="fab fa-github" style="font-size: 24px; color: #333"></i>
+            </a>
+          </div>
+          <div id="login-error" style="color: red; display: none;"></div> <!-- Error message -->
+        </form>
+
+        <form action="#" class="sign-up-form" onsubmit="return validateSignUpForm()">
+          <h2 class="title">Sign up</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" aria-label="Username" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" aria-label="Email" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock" id="toggle-password-signup"></i>
+            <input type="password" placeholder="Password" id="password-input-signup" aria-label="Password" required />
+          </div>
+          <input type="submit" class="btn" value="Sign up" />
+          <p class="social-text">Or Sign up with social platforms</p>
+          <div class="social-media">
+            <div class="social-icon g-signin2" id="google_btn">
+              <i class="fab fa-google" style="font-size: 24px; color: #4285F4;"></i>
+            </div>
+            <a href="https://facebook.com/YourPage" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f" style="font-size: 24px; color: #4267b2"></i>
+            </a>
+            <a href="https://github.com/YourGitHubProfile" target="_blank" class="social-icon">
+              <i class="fab fa-github" style="font-size: 24px; color: #333"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
